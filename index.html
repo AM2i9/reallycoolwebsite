@@ -27,27 +27,26 @@
             background-color: rgb(255, 204, 146);
         }
 
-        #reallycoolvideo{
+        #damon{
             visibility: hidden;
             position: fixed;
-            right: 0;
+            right:30%;
             bottom: 0;
-            min-width: 100%;
             min-height: 100%;
         }
 
         </style>
     </head> 
     <body>
-        <video id="reallycoolvideo">
-            <source src="./reallycoolvideo.mp4" type="video/mp4">
-        </video>
+        <image id="damon" src='./damoned.png'></image>
         <script>
             function realycoolfunction(){
                 document.getElementById("reallycoolbutton").style.visibility = "hidden";
-                var video = document.getElementById("reallycoolvideo");
-                video.style.visibility = "visible";
-                video.play();
+                var image = document.getElementById("damon");
+                var audio = new Audio("./damoned.mp3");
+                audio.play();
+                image.style.visibility = "visible";
+                
             }
         </script>
         <button id="reallycoolbutton" class="reallycoolbutton" onclick=realycoolfunction()>Really Cool Button</button>
