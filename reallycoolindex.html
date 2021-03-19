@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Really Cool Website</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="AM2i9 (Patrick Brennan)">
+        <meta name="description" content="Just a really cool website. Nothing else. It's just cool.">
+        <style>
+        body {
+            background-color: black;
+        }
+        .reallycoolbutton {
+            position:absolute;
+            background-color: rgb(207, 111, 0);
+            top: 50%;
+            left: 50%;
+            height: 100px;
+            width: 300px;
+            font-size: 20px;
+            border: none;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            transition: background-color 0.5s;
+        }
+
+        .reallycoolbutton:hover {
+            background-color: rgb(255, 204, 146);
+        }
+
+        #reallycoolvideo{
+            visibility: hidden;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        </style>
+    </head> 
+    <body>
+        <video id="reallycoolvideo">
+            <source src="./reallycoolvideo.mp4" type="video/mp4">
+        </video>
+        <script>
+            function realycoolfunction(){
+                document.getElementById("reallycoolbutton").style.visibility = "hidden";
+                var video = document.getElementById("reallycoolvideo");
+                video.style.visibility = "visible";
+                video.play();
+            }
+        </script>
+        <button id="reallycoolbutton" class="reallycoolbutton" onclick=realycoolfunction()>Really Cool Button</button>
+    </body>
+</html>
