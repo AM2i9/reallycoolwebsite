@@ -6,9 +6,11 @@
         <meta name="author" content="AM2i9 (Patrick Brennan)">
         <meta name="description" content="Just a really cool website. Nothing else. It's just cool.">
         <style>
+
         body {
             background-color: black;
         }
+
         .reallycoolbutton {
             position:absolute;
             background-color: rgb(207, 111, 0);
@@ -27,7 +29,7 @@
             background-color: rgb(255, 204, 146);
         }
 
-        #damon{
+        #media{
             visibility: hidden;
             position: fixed;
             right:30%;
@@ -38,15 +40,16 @@
         </style>
     </head> 
     <body>
-        <image id="damon" src='./damoned.png'></image>
+        <image id="media" src='./image.png'></image>
         <script>
             function realycoolfunction(){
                 document.getElementById("reallycoolbutton").style.visibility = "hidden";
-                var image = document.getElementById("damon");
-                var audio = new Audio("./damoned.mp3");
+                var image = document.getElementById("media");
+                var audio = new Audio("./audio.mp3");
                 audio.play();
                 image.style.visibility = "visible";
-                
+                window.setTimeout(() => image.style.visibility = "visible", 500)
+                window.setTimeout(() => window.close(), 1000)
             }
         </script>
         <button id="reallycoolbutton" class="reallycoolbutton" onclick=realycoolfunction()>Really Cool Button</button>
